@@ -12,14 +12,14 @@ public class deposit {
   {    
 
     
-    
+    return 5;
   }
   
   public int deposit_funds()					//Increments when a funder provides a donation
   {
    
     
-    
+    return 5;
   }      
 }
 
