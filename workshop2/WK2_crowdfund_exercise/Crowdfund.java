@@ -8,15 +8,17 @@ import java.lang.*;
 public class Crowdfund { 
   /* The first class called in the program - creates number of donators, predicted funds, and final outcome*/
    public static void main (String arg[]) 
-   {      								
+   {
+     Scanner input = new Scanner(System.in);      								
      int predictedDonations = 0;			//Variable declarations that can be potentially use
      int numUsers = 0;
      
-     int donation = 5;						//The amount (£) that donators are able to contribute
+     int donation = 5;						//The amount (ï¿½) that donators are able to contribute
      
-     System.out.println("Please enter the total number of backers");			    
+     System.out.println("Please enter the total number of backers: ");
+     numUsers = input.nextInt();			    
      
-     
+     input.close(); 
      /*The developer wants to implement three things: 
      
      	1) Allow the user to specify the number of donators participating in the crowd sourcing
