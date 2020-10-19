@@ -12,12 +12,12 @@ public class deposit {
   {    
 
     
-    return 5;
+    return balance;
   }
   
-  public int deposit_funds()					//Increments when a funder provides a donation
+  public synchronized int deposit_funds(int amount)					//Increments when a funder provides a donation
   {
-   
+    balance = balance + amount;
     
     return 5;
   }      
