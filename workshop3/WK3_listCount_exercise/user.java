@@ -1,5 +1,5 @@
 import java.util.*;
-public class user
+public class user implements Runnable
  {								
   private int id;
   private int num_elements;
@@ -15,5 +15,9 @@ public class user
       n++;
       num_elements--;
     }			
+  }
+
+  public void run(){
+    this.add_elements();
   }
 }  
