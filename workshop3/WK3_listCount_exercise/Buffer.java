@@ -15,19 +15,20 @@ public class Buffer 						//Provides data and operations onto the fixed-length q
      elements = 0;
      buf_size = n;
 
-     semaphore mutex = new semaphore(1);
-     semaphore empty = new semaphore(0);
-     semaphore full = new semaphore(n);
+     mutex = new semaphore(1);
+     empty = new semaphore(n);
+     full = new semaphore(0);
 
    }
 
-  public void add(int item)						//Add element to queue
+  public void addItem(int item)						//Add element to queue
    {
-     full.P();
-     mutex.P();
+     empty.down();
+     mutex.down();
      buf_list.add(item);
-     mutex.V();
-     empty.V();
+     elements++;
+     mutex.up();
+     full.up();
 
    }
 

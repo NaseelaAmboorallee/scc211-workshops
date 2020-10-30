@@ -11,13 +11,15 @@ public class user implements Runnable
   public void add_elements(){ //Add element to buffer, element value iterates from 0, 1, 2 .... num_elements
     int n = 0;
     while (num_elements > 0){						
-      buf.add(n);							
+      buf.addItem(n);							
       n++;
+      System.out.println("User " + id + " adds element " + n + "/");
       num_elements--;
     }			
   }
 
   public void run(){
-    this.add_elements();
+    add_elements();
+
   }
 }  
